@@ -1,0 +1,57 @@
+{ALGORITHME Triangle
+//BUT : Afficher un triangle croissant de caractère et un triangle décroissant d'entier
+//ENTREE : Une constante MAX 
+//SORTIE : Deux triangles 
+CONST 
+MAX = 11 
+TYPE 
+Tableau2c = Tableau [1..MAX,1..MAX] de caractère
+Tableau2i = Tableau [1..MAX,1..MAX] d'entier
+PROCEDURE tab1 (VAR T1:Tableau2c)
+VAR 
+i,j:entier
+DEBUT 
+POUR i<-1 A MAX FAIRE
+DEBUT 
+POUR j<-1 A MAX FAIRE 
+DEBUT 
+SI i>=j ALORS 
+DEBUT 
+T1[i,j]<-"O"
+FINSI 
+SI i=j OU i=MAX OU J=1 ALORS 
+DEBUT 
+T1[i,j]<-"X" 
+FINSI
+ECRIRE(T1[i,j])
+FINPOUR 
+FINPOUR 
+FINPROCEDURE 
+
+PROCEDURE tab2 (VAR T2:Tableau2i, VAR compteur:entier)
+VAR 
+i,j:entier 
+DEBUT 
+compteur<-0 
+POUR i<-MAX A 1 FAIRE 
+DEBUT  
+POUR j<-1 A MAX FAIRE 
+DEBUT 
+SI i>=j ALORS 
+DEBUT 
+T3[i,j]<-compteur 
+Write(T2[i,j])
+FINSI 
+FINPOUR 
+compteur<-compteur+1
+FINPOUR 
+FINPROCEDURE
+
+VAR 
+T2:Tableau[1..MAX,1..MAX] de caractère 
+T4:Tableau[1..MAX,1..MAX] d'entier 
+i,j,compteur:entier 
+DEBUT 
+TChar(T2) 
+Tint(T4,compteur)
+FIN. }
